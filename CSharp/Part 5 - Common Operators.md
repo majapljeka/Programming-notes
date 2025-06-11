@@ -83,9 +83,11 @@ namespace ConsoleApplication1
     }
 
 }
+```
 
 **Ternary operator example** : We have rewritten the above program using ternary operator. Notice the amount of code we have to write is greatly reduced.
 
+```
 using System;
 namespace ConsoleApplication1
 {

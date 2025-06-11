@@ -1,3 +1,10 @@
+- Boolean type - Only true or false
+- Integral Types = sbyte, byte, short, ushort, int, uint, long, ulong, char
+- Floating Types - float and double
+- Decimal Types
+- String Types
+
+
 [Built-in types (C# reference)](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types)
 
 

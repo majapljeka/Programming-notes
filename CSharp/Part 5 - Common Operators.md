@@ -52,6 +52,7 @@
             if (number1 == 10 || number2 == 20)
             {
                 Console.WriteLine("Atleast one of the condition is true");
+            }
 ```
 
 ```

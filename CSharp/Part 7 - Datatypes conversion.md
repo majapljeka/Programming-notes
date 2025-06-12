@@ -42,6 +42,9 @@ Parse (Convert String to integer)
 string number = "1234";
 int i = i.Parse(number);
 Console.WriteLine(i);
+
+
+BUT if we assign value to number 100TH we will get exception, and here we need TryParse
 ```
 
 TryParse

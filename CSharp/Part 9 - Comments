@@ -1,0 +1,5 @@
+Single line Comments    -   //
+Multi line Comments                     -   /*  */
+XML Documentation Comments      -   ///
+
+CTRL + K shortcut for single line comment

@@ -6,7 +6,7 @@ Here we can learn:
      b) Place holder syntax – Most preferred
 
 ```
-Reading and   Console.WriteLine("Please Enter your Firstname:");
+Console.WriteLine("Please Enter your Firstname:");
 string Firstname = Console.ReadLine();
 
 Console.WriteLine("Please Enter your Lastname:");

@@ -9,7 +9,7 @@ We will learn what is:
 
 
 - Class consists of data and behavior. Class data is represented by its fields and behavior is represented by its methods.
-- Purpose of a class constructor is to initialize class fields. A clas contructor is automatically called when an instance of a class is created. Constructors do not have return values and always have the same name as the class. \
+- Purpose of a class constructor is to initialize class fields. A clas contructor is automatically called when an instance of a class is created. Constructors do not have return values and always have the same name as the class. 
 
 Constructors are not mandatory. If we do not privide constructors, a default parameter less constructor is automatically provided.
 Constructors can be overloaded by the number and type of parameters.

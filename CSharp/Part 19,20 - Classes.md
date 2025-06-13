@@ -7,11 +7,14 @@ We will learn what is:
 5. Destructors
 
 
+
 1. Class consists of data and behavior. Class data is represented by its fields and behavior is represented by its methods.
-2. Purpose of a class constructor is to initialize class fields. A clas contructor is automatically called when an instance of a class is created. Constructors do not have return values and always have the same name as the class.
+2. Purpose of a class constructor is to initialize class fields. A clas contructor is automatically called when an instance of a class is created. Constructors do not have return values and always have the same name as the class. \
 
 Constructors are not mandatory. If we do not privide constructors, a default parameter less constructor is automatically provided.
 Constructors can be overloaded by the number and type of parameters.
+
+
 5. Desctructors - has the same name as class and tilda sign ~, They dont take any params and they do not return any value. Destructors are places where you could put code to relase any resources your class was holding during its lifetime. 
 They are normally called when the C# garbage collector decides to clean your object from memory.
 

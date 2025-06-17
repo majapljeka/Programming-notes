@@ -121,7 +121,6 @@ namespace IntroductionToCSharp
             Console.WriteLine("Area1 = {0}", Area1);
         }
     }
-
 }
 ```
 
@@ -134,3 +133,40 @@ You declare a static contructor by using the keyword static in front of the cont
 **Static contructors is called only once, no matter how many instances you create.**
 
 **Static contructors are called before instance contructors.**
+
+```
+class Circle
+{
+    public static float _PI;
+    int _Radius;
+
+    static Circle()
+    {
+        Console.WriteLine("Static Constructor Called");
+        Circle._PI = 3.141F;
+    }
+
+    public Circle(int Radius)
+    {
+        Console.WriteLine("Instance Constructor Called");
+        this._Radius = Radius;
+    }
+
+    public float CalculateArea()
+    { 
+    return Circle._PI * this._Radius * this._Radius;
+        //Additional1: if we on the beginning _PI will be static, we will have return name of the Class -> Circle._PI * this._Radius * this._Radius;
+    }
+}
+
+namespace IntroductionToCSharp
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Circle._PI);
+        }
+    }
+}
+```

@@ -68,3 +68,7 @@ namespace IntroductionToCSharp
     }
 }
 ```
+
+###  Static and instance class members
+
+

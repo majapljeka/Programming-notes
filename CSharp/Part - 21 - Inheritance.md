@@ -4,6 +4,8 @@ Pillars of OOO:
 3. Abstraction
 4. Polymorphism
 
+Inheritance
+
 1. Inheritance is one of the primary pillars of OOO.
 2. It allows code reuse.
 3. Code reuse can reduce time and errors.

@@ -1,3 +1,5 @@
+## Polymorphism
+
 - Overriding virtual method
 - Polymorphism
 
@@ -111,3 +113,49 @@ public class Program
 }
 ```
 
+##  Difference between method overriding and method hiding
+
+### Method Overriding
+```
+
+public class BaseClass
+{
+    public virtual void Print()
+    { 
+    Console.WriteLine("I am a Base Class Print Method");
+    }    
+}
+
+public class DerivedClass : BaseClass
+{
+    public override void Print()
+    {
+        Console.WriteLine("I am a Derived Class Print Method");
+    }
+}
+
+public class Program
+{
+    public static void Main()
+    {
+        BaseClass B = new DerivedClass();
+        B.Print();
+    }
+}
+
+Output is : I am a Derived Class Print Method
+```
+
+### Method Hiding
+
+```
+instead :    public override void Print()
+leave :      public new void Print()
+```
+
+And if we want to call derived class we can do that with object initialization in Main class:
+
+```
+DerivedClass D = new DerivedClass();
+D.Print();
+```

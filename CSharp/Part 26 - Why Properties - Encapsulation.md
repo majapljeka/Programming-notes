@@ -73,7 +73,7 @@ public class Program
 
 Lets now make getter and setter methods for the name:
 
-``public class Student
+```public class Student
 {
     private int ID;
     private string Name;
@@ -102,6 +102,4 @@ Lets now make getter and setter methods for the name:
         }*/
     }
 }
-`
-
 ```

@@ -89,6 +89,8 @@ Structs cannot have explicit parameter-less constructor where as a class can.
 
 Struct cant injerit from another calss where as class can, Both structs and classess can inherit from an interface
 
+Object reference variable vs object instance
+
 ![StackAndHeap](https://github.com/majapljeka/Programming-notes/blob/main/CSharp/images/stackAndHeap.png)
 
 Examples of structs in the .NET framework - **int (System.Int32), double(System.Double)**

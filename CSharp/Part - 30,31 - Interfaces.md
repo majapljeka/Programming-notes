@@ -100,3 +100,121 @@ reference on Interface is only available like this:
 ```
 
 ### Explicit interfaces implementation
+
+In code we can see two Interfaces with the same InterfaceMethod. Question now is which one is implemented? The interesting this is that we will not have compiler errors.
+
+```
+interface I1
+{
+    void InterfaceMethod();
+}
+
+interface I2
+{
+    void InterfaceMethod();
+}
+
+public class Program : I1, I2
+{
+    void I1.InterfaceMethod()  // We can mark which interface we want to implement
+    {
+        Console.WriteLine("I1 Interface Method");
+    }
+
+    public static void Main()
+    {
+        Program P = new Program();
+        P.InterfaceMethod();
+    }
+}
+```
+
+Question in Main method is which method we are calling? we can solve this in Main method by casting and point to the Interface:
+
+```
+ public static void Main()
+ {
+     Program P = new Program();
+     ((I1)P).InterfaceMethod();
+ }
+```
+
+```
+// Access modifiers are not allowed on explicitly implemented interface members.
+
+interface I1
+{
+    void InterfaceMethod();
+}
+
+interface I2
+{
+    void InterfaceMethod();
+}
+
+
+// We are using Explicit Interface implementation technique to solve this problem
+public class Program : I1,I2
+{
+
+    // When a class explicitly implements, an interface member, the interface member can no logner be accessed thru class reference variable, but only thru the interface reference varible.
+
+    void I1.InterfaceMethod()
+    {
+        Console.WriteLine("I1 Interface Method");
+    }
+
+    void I2.InterfaceMethod()
+    {
+        Console.WriteLine("I2 Interface Method");
+
+    }
+    public static void Main()
+    {
+        Program P = new Program();
+        ((I1)P).InterfaceMethod();
+        ((I2)P).InterfaceMethod();
+
+     /* We can access on this way as well apart from cast
+         I1 i1 = new Program();
+         I2 i2 = new Program();
+        
+         i1.InterfaceMethod();
+         i2.InterfaceMethod();
+     */
+    }
+```
+
+Also we can have situation where one Interface can implemented by default and another one explicitely:
+
+```
+interface I1
+{
+    void InterfaceMethod();
+}
+
+interface I2
+{
+    void InterfaceMethod();
+}
+
+public class Program : I1,I2
+{
+    public void InterfaceMethod()  // I1 is default Interface
+    {
+        Console.WriteLine("I1 Interface Method");
+    }
+
+    void I2.InterfaceMethod()  // T2 is explicit Interface
+    {
+        Console.WriteLine("I2 Interface Method");
+
+    }
+    public static void Main()
+    {
+        Program P = new Program();
+        P.InterfaceMethod();
+        ((I2)P).InterfaceMethod();     
+    }
+```
+

@@ -98,3 +98,5 @@ reference on Interface is only available like this:
         I1.Print1();
 ;
 ```
+
+### Explicit interfaces implementation

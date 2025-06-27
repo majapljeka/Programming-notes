@@ -84,7 +84,17 @@ public class Program
     {
         Customer C1 = new Customer();
         C1.Print1();
-        C1.Print2 ();
+        C1.Print2();
     }
 }
+```
+
+reference on Interface is only available like this:
+
+```
+ public static void Main()
+    {
+        ICustomer1 I1 = new Customer();
+        I1.Print1();
+;
 ```

@@ -60,7 +60,7 @@ namespace IntroductionToCSharp
 ```
 
 1. In this example DerivedClass inherits from ParentClass.
-2. C# supports only single class inheritance.
+2. C# supports only single class inheritance, it does not support multiple class inheritance. Part 34. This ambiguity is called as Diamond problem.
 3. C# supports multiple interface inheritance.
 4. Child class is a specialization of base class.
 5. Base classess are automatically insantiated before derived classes.

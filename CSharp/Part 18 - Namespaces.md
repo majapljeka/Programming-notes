@@ -1,5 +1,4 @@
-Namespaces are used to organize our programs.They are not corespond to file, directory or assembly names.
-They could be written in separate files and / or separate assemblies and still belongs to the same namespace.
+Namespaces are used to organize our programs.C# namespace is used to provide a level of code separation. A class name declared in one class does not conflict with the class name in another class. It allows us to break up our code to be easier to understand and maintain, especially when the program is extensive.
 
 If we want to reference our main project to other project in Solution explorer or other project at all, we can go:
 right click on our project -> add Reference -> mark external project and we can user their namespaces and classes!

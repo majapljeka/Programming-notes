@@ -29,4 +29,159 @@ public class Program
 
 ### Delegates in use I part
 
+```
+using System;
+using System.Collections.Generic;
+
+
+
+public class Program
+{
+    public static void Main()
+    {
+      List<Employee> empList = new List<Employee>();
+
+        empList.Add(new Employee(){ID = 101 , Name = "Mike", Experience = 5, Salary = 4000});
+        empList.Add(new Employee(){ID = 101 , Name = "Pera", Experience = 4, Salary = 3000});
+        empList.Add(new Employee(){ID = 101 , Name = "Sasa", Experience = 5, Salary = 2000});
+        empList.Add(new Employee(){ID = 101 , Name = "Milan", Experience = 3, Salary = 2000});
+
+        Employee.PromoteEmployee(empList);
+    }
+}
+
+class Employee
+{
+    public int ID {get; set;}
+    public string Name {get; set;}
+    public int Experience {get; set;}
+    public int Salary {get; set;}
+
+    public static void PromoteEmployee(List<Employee> employeeList)
+    {
+        foreach (Employee employee in employeeList)
+        {
+            if(employee.Experience >= 5){
+                Console.WriteLine(employee.Name + " promoted!");
+            }
+        }
+    }
+}
+```
+**Pass function as a parameter**
+Now if someone wants to reuse PromoteEmployee method and extend, pass method as parameter to antother method, we can use with delegates.
+The problem for this method is hardcode logic for promoting employees, we want to be reusable.
+
 ### Delegates in use II part
+
+```
+using System;
+using System.Collections.Generic;
+
+
+
+public class Program
+{
+    public static void Main()
+    {
+        List<Employee> empList = new List<Employee>();
+
+        empList.Add(new Employee() { ID = 101, Name = "Mike", Experience = 5, Salary = 4000 });
+        empList.Add(new Employee() { ID = 101, Name = "Pera", Experience = 4, Salary = 3000 });
+        empList.Add(new Employee() { ID = 101, Name = "Sasa", Experience = 5, Salary = 2000 });
+        empList.Add(new Employee() { ID = 101, Name = "Milan", Experience = 3, Salary = 2000 });
+
+        //Constructor of delegate
+        IsPromotable IsPromotable = new IsPromotable(ProgramHelpers.Promote);
+
+        Employee.PromoteEmployee(empList, IsPromotable); //Passing delegate as parameter
+    }
+}
+
+delegate bool IsPromotable(Employee empl);
+
+class Employee
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public int Experience { get; set; }
+    public int Salary { get; set; }
+
+    public static void PromoteEmployee(List<Employee> employeeList, IsPromotable isEligibleToPromote)
+    {
+        foreach (Employee employee in employeeList)
+        {
+            if (isEligibleToPromote(employee))
+            {
+                Console.WriteLine(employee.Name + " promoted!");
+            }
+        }
+    }
+}
+```
+
++ ProgramHelper.cs class
+
+```
+internal static class ProgramHelpers
+{
+    //Delegate condition
+    public static bool Promote(Employee emp)
+    {
+        if (emp.Experience >= 5)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+```
+
+Instead we can do also with Lambda expression in one line and get rid of delegates (condition).
+
+```
+using System;
+using System.Collections.Generic;
+
+
+public class Program
+{
+    public static void Main()
+    {
+        List<Employee> empList = new List<Employee>();
+
+        empList.Add(new Employee() { ID = 101, Name = "Mike", Experience = 5, Salary = 4000 });
+        empList.Add(new Employee() { ID = 101, Name = "Pera", Experience = 4, Salary = 3000 });
+        empList.Add(new Employee() { ID = 101, Name = "Sasa", Experience = 5, Salary = 2000 });
+        empList.Add(new Employee() { ID = 101, Name = "Milan", Experience = 3, Salary = 2000 });
+
+        //Constructor of delegate
+
+        Employee.PromoteEmployee(empList, emp => emp.Experience >= 5);
+    }
+}
+
+delegate bool IsPromotable(Employee empl);
+
+class Employee
+{
+    public int ID { get; set; }
+    public string Name { get; set; }
+    public int Experience { get; set; }
+    public int Salary { get; set; }
+
+    public static void PromoteEmployee(List<Employee> employeeList, IsPromotable isEligibleToPromote)
+    {
+        foreach (Employee employee in employeeList)
+        {
+            if (isEligibleToPromote(employee))
+            {
+                Console.WriteLine(employee.Name + " promoted!");
+            }
+        }
+    }
+}
+```

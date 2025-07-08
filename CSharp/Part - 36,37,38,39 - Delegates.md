@@ -200,13 +200,120 @@ There are 2 approaches to create multicast delegate. Depending on the approach y
 
 Note: A Multicast delegate, invokes the methods in the invocation list, in the same order in which they are added. 
 
-If the delegate has a return type other than void and if the delegate is a multicast delegate, only the valie of the last invoked method will be returned. Along the same lines, if the delegate has an out parameter, the value of the output parameter, will be the value assigned by the last method.
+If the delegate has a return type other than void and if the delegate is a multicast delegate, only the value of the last invoked method will be returned. Along the same lines, if the delegate has an out parameter, the value of the output parameter, will be the value assigned by the last method.
+
+```
+using System;
+using System.Collections.Generic;
+
+public delegate int SampleDelegate();
+
+
+public class Program
+{
+    public static void Main()
+    {
+     SampleDelegate del = new SampleDelegate(SampleMethodOne);
+     del += SampleMethodOne2;
+     
+     int  DelegateReturnValue = del();
+
+     Console.WriteLine("DelegateReturnValue = {0}" , DelegateReturnValue);
+    }
+    public static int SampleMethodOne()
+    {
+        return 1;
+    }
+       public static int SampleMethodOne2()
+    {
+        return 2;
+    }
+}
+```
+
+```
+
+```
 
 
 Common interview question - Where do you use multicast delegates?
 Multicast delegates makes implementation of observer design patter very simple. Observer patter is also called as publish/subscribe pattern.
 
+First approach to run multicast delegates:
+
+```
+using System;
+using System.Collections.Generic;
+
+public delegate void SampleDelegate();
 
 
+public class Program
+{
+    public static void Main()
+    {
+     SampleDelegate del1,del2,del3,del4;
+     del1 = new SampleDelegate(SampleMethodOne);
+     del2 = new SampleDelegate(SampleMethodOne2);
+     del3 = new SampleDelegate(SampleMethodOne3);
 
+     del4 = del1 + del2 + del3;
+     del4 = del1 + del2 + del3 - del2; // 2.If we want to remove del2
+     del4(); // this is the mulitcast delegate
+    }
+
+    public static void SampleMethodOne()
+    {
+        Console.WriteLine("SampleMethodOne Invoked");
+    }
+       public static void SampleMethodOne2()
+    {
+        Console.WriteLine("SampleMethodOne2 Invoked");
+    }
+       public static void SampleMethodOne3()
+    {
+        Console.WriteLine("SampleMethodOne3 Invoked");
+    }
+}
+```
+
+Second approach to run multicast delegates:
+
+```
+using System;
+using System.Collections.Generic;
+
+public delegate void SampleDelegate();
+
+public class Program
+{
+    public static void Main()
+    {
+     SampleDelegate del = new SampleDelegate(SampleMethodOne);
+     del += SampleMethodOne2;
+     del += SampleMethodOne3;
+     dl -= SampleMethodOne; // -= remove delegate
+
+     del();
+    }
+    public static void SampleMethodOne()
+    {
+        Console.WriteLine("SampleMethodOne Invoked");
+    }
+       public static void SampleMethodOne2()
+    {
+        Console.WriteLine("SampleMethodOne2 Invoked");
+    }
+       public static void SampleMethodOne3()
+    {
+        Console.WriteLine("SampleMethodOne3 Invoked");
+    }
+}
+```
+
+Third approach if function return a value:
+
+```
+
+```
 

@@ -83,3 +83,8 @@ else
 Console.WriteLine("please enter the correct number " + r);
 }
 ```
+
+Explanation:
+
+- int.Parse: This method is straightforward and throws an exception if the input string is not a valid integer.
+- int.TryParse: This method is safer as it does not throw an exception and returns true if the conversion is successful and false otherwise. The converted integer is stored in the out parameter.

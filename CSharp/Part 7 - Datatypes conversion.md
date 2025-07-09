@@ -36,6 +36,12 @@ result is 100
 
 ### Difference betweeen Parse and tryParse
 
+If the number is in a string format you have 2 options - Parse() and TryParse()
+
+Parse() method throws an exception if it cannot parse the value, whereas TryParse() returns a bool indicating wheather it succeeded or failed.
+
+Use Parse() if you are sure the value will be valid, otherwise use TryParse().
+
 Parse (Convert String to integer)
 
 ```
@@ -65,22 +71,31 @@ public class Program
 BUT if we assign value to number 100TH we will get exception, and here we need TryParse
 ```
 
-TryParse
+**TryParse**
 
 ```
-string strNumber = "200t";
-//we can also try some logical numberlike 1234
+using System;
 
-int result = 0;
-bool isConversionSuccessful = int.TryParse(strNumber, out result);
 
-if (isConversionSuccessful)
+public class Program
 {
-Console.WriteLine(result);
-}
-else
-{
-Console.WriteLine("please enter the correct number " + r);
+    public static void Main()
+    {
+        string strNumber = "92329";
+        //we can also try some logical numberlike 1234
+
+            int Result = 0;
+            bool isConversionSuccessful = int.TryParse(strNumber, out Result);
+
+            if (isConversionSuccessful)
+            {
+            Console.WriteLine(Result);
+            }
+            else
+            {
+            Console.WriteLine("Please enter the correct number ");
+            }
+    }   
 }
 ```
 

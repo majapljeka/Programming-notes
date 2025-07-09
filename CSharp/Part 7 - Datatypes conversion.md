@@ -39,9 +39,27 @@ result is 100
 Parse (Convert String to integer)
 
 ```
-string number = "1234";
-int i = i.Parse(number);
-Console.WriteLine(i);
+using System;
+
+
+public class Program
+{
+    public static void Main()
+    {
+        string number = "234";
+
+        try
+        {
+            int i = int.Parse(number);
+            Console.WriteLine("The number is {0}" , i);
+
+        }
+        catch(FormatException){
+             Console.WriteLine("The input string is not in the correct format.");
+        }
+
+    }   
+}
 
 
 BUT if we assign value to number 100TH we will get exception, and here we need TryParse

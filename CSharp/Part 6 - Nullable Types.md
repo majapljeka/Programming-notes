@@ -36,7 +36,7 @@ int AvailableTickets;
 int TicketsOnSale == 100;
 AvailableTickets = TicketsOnSale ?? 0; // this line exchange if lines of codes below:
 
-if (TicketsOnSale = null)
+if (TicketsOnSale == null)
 {
  AvailableTickets = 0;
 }

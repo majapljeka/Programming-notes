@@ -1,7 +1,15 @@
+### WHILE loop
+
+The while loop:
+
+1. While loop checks the conditions first.
+2. If the condition is true, statements with in the loop are executed.
+3. This process is repeated as long as the condition evaluates to true.
+
+Note: Dont forget to update the variable participating in the condition,so the loop end, at some point.
+
 Task: The client is asked to write number and based on that number the program will write below even numbers until user number. 
 (ex. if 10 is written answer will be 0 2 4 6 8 10)
-
-### WHILE loop
 
 ```
 int[] Numbers = new int[3];
@@ -34,6 +42,12 @@ while (Start <= userTarget)
 ```
 
 ### DO
+
+Do While loop
+
+1. A do loop checks its conditions at the end of the loop.
+2. This means that the do loop is guaranted to execute at least one time.
+3. Do loops are used to present a menu to the user.
 
 ```
  string userChoice = "";
@@ -69,6 +83,10 @@ while (Start <= userTarget)
 
 ### FOR
 
+The for loop
+
+A for loop is very similar to while loop. In a while loop we do the initialization at one place, condition check at another place, and modifying the variable at another place, where as for loop has all of these at one place.
+
 Example for loop with **break**
 
 ```
@@ -97,7 +115,6 @@ It will print even numbers in loop only - Solution #3
  }
 ```
 
-
 Another example of FOR loop:
 ```
 int[] Numbers = new int[3];
@@ -113,6 +130,8 @@ for (int i = 0; i < Numbers.Length; i++)
 ```
 
 ### FOREACH
+
+A foreach loop is user to iterate through the items in a collection. For example, foreach loop can be used with arrays or collections such as ArrayList, HashTable and Generics. 
 
 ```
 int[] Numbers = new int[3];

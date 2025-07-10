@@ -10,6 +10,7 @@ Numbers[0] = 101;
 Numbers[1] = 102;
 Numbers[2] = 103;
 
+int j = 0;
 while (j < Numbers.Length)
 {
    Console.WriteLine(Numbers[j]);

@@ -133,6 +133,8 @@ There are the four types of method parameters:
 
 1. Passing Parameter by Value example:
 
+![Pass by value and reference](https://github.com/majapljeka/Programming-notes/tree/main/CSharp/images/methods-by-value-reference.png)
+
 ```
  internal class Program
  {

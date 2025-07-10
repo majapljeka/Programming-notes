@@ -129,6 +129,7 @@ There are the four types of method parameters:
 3. Output Parameters
 4. Parameter Arrays
 
+
 1. Passing Parameter by Value example:
 
 ```

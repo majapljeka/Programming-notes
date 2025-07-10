@@ -127,7 +127,10 @@ There are the four types of method parameters:
 1. Value parameters
 2. Reference parameters
 3. Output Parameters
-4. Parameter Arrays \
+4. Parameter Arrays 
+
+
+
 
 
 1. Passing Parameter by Value example:

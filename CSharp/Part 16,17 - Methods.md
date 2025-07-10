@@ -133,7 +133,7 @@ There are the four types of method parameters:
 
 1. Passing Parameter by Value example:
 
-![alt text](https://github.com/majapljeka/Programming-notes/tree/main/CSharp/images/methods-by-value-reference.png)
+![StackAndHeap](https://github.com/majapljeka/Programming-notes/blob/main/CSharp/images/methods-by-value-reference.png)
 
 ```
  internal class Program

@@ -115,6 +115,8 @@ public class Program
 
 ##  Difference between method overriding and method hiding
 
+![Method-overriding](https://github.com/majapljeka/Programming-notes/blob/main/CSharp/images/method-overring.png)
+
 ### Method Overriding
 ```
 

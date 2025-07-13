@@ -72,3 +72,15 @@ public class Program
    }
 }
 ```
+
+Releasing System Resources
+
+We can use try, catch and finally blocks fo exception handling:
+**try** - The code that can possible cause an exeption will be in the try block.
+**catch** - Handles the exception.
+**finally** - Clean and free resources that the class was holding onto during the program execution. Finally block is optional.
+
+**Note** It is a good practice to always release resources in the finally block, because finally block is guaranteed to execute, irrespective of wheather there is an exception or not
+
+Specific exceptions will be caught before the base general exception, so specific exception blocks should always be on top fo the base exception block.
+Otherwise, you will encounter a compile error.

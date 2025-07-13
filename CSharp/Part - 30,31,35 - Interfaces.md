@@ -1,4 +1,6 @@
-Interface present what class needs to do, but dont how to do.
+Interface allowed polymorphism and present what class needs to do, but dont how to do. It is act as contract that class will implement everything is written in it.
+
+Concrete interfaces reduce the dependency between classes, because a class does not depend directly on the implementation of another class, but only on the interface that that class implements.
 
 We create interfaces using interface keyword. Just like classes interfaces also contains properties, methids, delegates or events, but only declaration and no implementations.
 

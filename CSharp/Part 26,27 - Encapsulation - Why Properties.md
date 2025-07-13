@@ -107,9 +107,9 @@ public class Student
 
 ### Properties
 
-Read/Write Properties
-Read Only Properties
-Write Only Properties
+Read/Write Properties \
+Read Only Properties \
+Write Only Properties \
 Auto Implemented Properties
 
 ```

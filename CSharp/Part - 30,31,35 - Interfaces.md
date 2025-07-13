@@ -1,3 +1,5 @@
+Interface present what class needs to do, but dont how to do.
+
 We create interfaces using interface keyword. Just like classes interfaces also contains properties, methids, delegates or events, but only declaration and no implementations.
 
 **Interfaces can only have declarations and no have definitation or implementations.**

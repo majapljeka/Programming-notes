@@ -113,10 +113,14 @@ public class Student
 
 ### Properties
 
-Read/Write Properties \
-Read Only Properties \
-Write Only Properties \
-Auto Implemented Properties
+in C# to encapsulate and protect fields we use properties:
+
+1. We use get and set accessors to implement properties
+2. A property with both get and set accessor is a **Read/Write** property
+3. A property with only get accessor is a **Read only** property
+4. A property with only set accessor is a **Write only** property
+
+Note: The advantage of properties over traditional Get() and Set() method is that, you can access them as if they were public fields.
 
 ```
 public class Student

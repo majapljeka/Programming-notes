@@ -107,6 +107,11 @@ public class Student
 
 ### Properties
 
+Why do we need properties in C#?
+Short answer: Encapsulation
+
+Long answer: Properties are very versatile. They allow you to choose how you want to expose your data to outside objects.
+
 Read/Write Properties \
 Read Only Properties \
 Write Only Properties \

@@ -235,3 +235,54 @@ Example:
 With in the .NET framework we dont have any exception, that adequately describes this problem. So this scenario is one of the examples where you want to create a custom exception.
 
 ON HOLD
+
+### Exception handling abuse
+
+Exception are unforeseen errors that occur when a program is running. For example, when an application is executing a query, the DB connection is lost. Exception handling is generally used to handle these scenarios.
+
+Using exception handling to implement program logical flow is bad and is termed as exception handling abuse.
+
+```
+using System;
+using System.IO;
+
+public class Program 
+{
+   public static void Main()
+   {
+   try{
+       Console.WriteLine("Please enter Numerator");
+     int Numerator = Convert.ToInt32(Console.ReadLine()); 
+
+     Console.WriteLine("Please enter Denominator");
+     int Denominator = Convert.ToInt32(Console.ReadLine());  
+
+     int Result = Numerator / Denominator;
+
+     Console.WriteLine("Result is {0}", Result); 
+   }
+   catch (FormatException)
+   {
+      Console.WriteLine("Please enter a number");
+   }
+   catch (OverflowException)
+   {
+      Console.WriteLine("Only numbers between {0} && {1} are alowed", Int32.MinValue,Int32.MaxValue);
+   }
+    catch(DivideByZeroException)
+    {
+      Console.WriteLine("Denominator cant be a zero");
+    }
+    catch(Exception ex)
+    {
+      Console.WriteLine(ex.Message);
+    }
+   }
+}
+```
+
+ABOVE is WRONG!!!
+
+### Prevention Exception handling abuse
+
+

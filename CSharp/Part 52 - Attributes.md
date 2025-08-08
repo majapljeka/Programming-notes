@@ -45,9 +45,9 @@ public class Calculator
 }
 ```
 
-This is fine, but if we want to explicitely say that Obsolete attribut should not use (int, int method) we can add in Customized message:
+This is fine, but if we want to explicitely say that Obsolete attribut should not use (int, int method) we can add in Customized message (Boolean true is added and error message will be reflected):
 
-`[Obsolete("Use Add(List<int> Numbers Method")]`
+`[Obsolete("Use Add(List<int> Numbers Method", true)]`
 
 After build, if we hover Add(int,int) method we should see results.
 

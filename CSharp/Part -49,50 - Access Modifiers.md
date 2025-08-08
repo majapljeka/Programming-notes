@@ -1,4 +1,5 @@
 There are 5 different access modifiers in C#.
+**Affects on variables**
 
 
 1. Private
@@ -60,3 +61,15 @@ Protected Internal => Anywhere with in the containing assembly, and from within 
 
 
 **In order to access from (AssemblyTwo) project to another project class member int ID = something (in AssemblyOne project- class AssemblyOneClass), you have to make reference to that project.AND add on the top using AssemblyOne; It is similar like Console which we are often used in console app.**
+
+---
+
+#### Access modifiers for types (affects classes)
+
+
+You can use all the 5 access modifiers for type members, but type allows only **Internal and Public** access modifiers.
+It is a compile error to use private, protected and protected internal access modifiers with types.
+
+
+
+

@@ -89,4 +89,16 @@ Response.Write("Full Name = " + FullName2 + "<br/>");
 a) WebForm1.aspx.cs - Contains the developer code
 b) WebForm1.aspx.designer.cs - Contains the system generated code. For example, declarations for the controls that you drag and drop on the webform.
 
-2. When working on large projects, spreading a class over separate files allows multiple programmers to work on it simultaneously. Though, microsoft claims this as an advantage, I haven't really seen anywhere, people using partial classes, just to work on them simultaneously. 
+2. When working on large projects, spreading a class over separate files allows multiple programmers to work on it simultaneously. Though, microsoft claims this as an advantage, I haven't really seen anywhere, people using partial classes, just to work on them simultaneously.
+
+
+### Creating Partial Classes 
+
+1. All the parts spread accross different files, must use the **partial keyword.**
+2. All the parts spread accross different files, must have **the same access modifiers.**
+3. If any of the parts are declared abstract, **then the entire type is considered abstract.**
+4. If any of the part are declared sealed, **then the entire type is considered sealed.**
+5. If any of the parts inherit a class, **then the entire type inherits that class.**
+6. **C# does not support multiple class inheritance**/ Different parts of the partial class, must not specify **different base classess.**
+7. Different parts of the partial class can specify different base interfaces, and the **final type implements all of the interfaces listed by all of the partial declarations.**
+8. Any members that are declared in a partial definition **are available to all of the other part of partial class.**

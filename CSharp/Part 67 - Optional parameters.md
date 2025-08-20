@@ -1,3 +1,5 @@
+**A parameter array must be the last parameter in a formal parameter list. The following function will not compile.**
+
 ```
 public class Program 
 {

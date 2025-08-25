@@ -15,3 +15,45 @@ For example. we can create a list of Integers, Strins, and even complex types.
 Unlike arrays, list can grow in size automatically.
 
 This class also provides methods to search, sort and manipulate lists.
+
+```
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+
+public class Program 
+{
+   private static void Main()
+   {
+      Customer customer1 = new Customer()
+      {
+        ID = 101,
+        Name = "Mark",
+        Salary = 5000
+      };
+
+       Customer customer2 = new Customer()
+      {
+        ID = 104,
+        Name = "Sam",
+        Salary = 3000
+      };
+
+       Customer customer3 = new Customer()
+      {
+        ID = 107,
+        Name = "Pat",
+        Salary = 7000
+      };
+
+ 
+   }
+}
+
+public class Customer
+{
+  public int ID { get; set; }
+  public string Name { get; set; }
+  public int Salary{ get; set; }
+}
+```

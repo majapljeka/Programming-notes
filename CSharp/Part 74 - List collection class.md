@@ -71,3 +71,11 @@ public class Customer
   public int Salary{ get; set; }
 }
 ```
+
+When we want customer3 be on position1 we can do that with:
+
+`customers.Insert(0, customer3)`
+
+To check if there is change:
+
+`customers.IndexOf(customer3)`

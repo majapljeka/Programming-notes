@@ -21,6 +21,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
+
 public class Program 
 {
    private static void Main()
@@ -46,6 +47,19 @@ public class Program
         Salary = 7000
       };
 
+      List<Customer> customers = new List<Customer>(2);
+      customers.Add(customer1);
+      customers.Add(customer2);
+      customers.Add(customer3);
+
+      //Customer c = customers[0];
+
+      foreach(Customer c in customers)
+      {
+        Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}", c.ID, c.Name, c.Salary);
+      }
+
+     // Console.WriteLine("ID = {0}, Name = {1}, Salary = {2}", c.ID, c.Name, c.Salary);
  
    }
 }
